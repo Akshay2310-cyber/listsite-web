@@ -30,11 +30,13 @@
 }
 
 .login-page::before {
-    left: 240px;
+    left: 60px;
+    /* Less gap from edge */
 }
 
 .login-page::after {
-    right: 240px;
+    right: 60px;
+    /* Less gap from edge */
 }
 
 /* Navbar */
@@ -43,7 +45,8 @@
     justify-content: space-between;
     align-items: center;
     height: 90px;
-    padding: 0;
+    /* Padding = Line Position (60px) + Spacing (e.g., 30px) */
+    padding: 0 90px;
     background-color: #ffffff;
     border-bottom: 1px solid #e0e0e0;
     z-index: 5;
@@ -51,34 +54,36 @@
 
 .nav-brand {
     /* Precise dimensions requested */
-    width: 240px;
+    width: auto;
+    /* Allow auto width */
     height: 100%;
 
     font-family: 'General Sans', sans-serif;
     font-size: 27px;
     font-weight: 500;
     font-style: normal;
-    /* "Medium" usually maps to 500 weight */
     line-height: 100%;
     letter-spacing: 0%;
     color: #003D35;
     text-transform: uppercase;
 
-    /* Flex alignment if needed, though block is fine */
     display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; REMOVED to align natural left */
 }
 
 .nav-auth-link {
-    width: 240px;
+    width: auto;
+    /* Allow auto width */
     height: 100%;
+
     font-size: 14px;
     color: #666;
     font-weight: 400;
+
     display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; REMOVED to align natural right */
 }
 
 .nav-auth-link a {
