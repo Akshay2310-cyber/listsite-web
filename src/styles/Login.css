@@ -22,7 +22,8 @@
 .login-page::after {
     content: '';
     position: absolute;
-    top: 0;
+    top: 90px;
+    /* Starts below navbar */
     bottom: 0;
     width: 1px;
     background-color: #e0e0e0;
