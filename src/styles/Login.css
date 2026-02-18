@@ -85,24 +85,41 @@
 }
 
 /* Typography */
+/* Typography */
+.login-header-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
 .login-title {
     font-size: 26px;
     font-weight: 700;
     color: #1a1a1a;
-    margin: 0 0 12px 0;
+    margin: 0;
 }
 
 .login-subtitle {
     color: #757575;
     font-size: 15px;
     line-height: 1.5;
-    margin-bottom: 32px;
     font-weight: 400;
+    margin: 0;
 }
 
 /* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    flex: 1;
+    /* Allow form to take available space if needed */
+    width: 100%;
+}
+
 .form-group {
-    margin-bottom: 24px;
+    margin: 0;
+    /* Let flex gap handle spacing */
     text-align: left;
 }
 
@@ -124,6 +141,8 @@
     border-radius: 6px;
     outline: none;
     transition: border-color 0.2s;
+    box-sizing: border-box;
+    /* Crucial for width: 100% inside flex */
 }
 
 .input-field::placeholder {
@@ -159,8 +178,6 @@
     margin-top: 12px;
     font-size: 13px;
     font-weight: 600;
-    color: #00695c;
-    /* Slightly lighter green for link, or stick to theme */
     color: #003D35;
     text-decoration: none;
     text-transform: uppercase;
@@ -178,6 +195,7 @@
     font-weight: 600;
     cursor: pointer;
     margin-top: 8px;
+    /* Extra margin if needed, or rely on gap */
     text-transform: uppercase;
     transition: background 0.2s;
 }
@@ -190,7 +208,8 @@
 .divider {
     display: flex;
     align-items: center;
-    margin: 30px 0;
+    margin: 0;
+    /* Relies on parent gap: 32px */
     color: #757575;
     font-size: 14px;
 }

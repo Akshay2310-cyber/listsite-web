@@ -37,10 +37,12 @@ export default function Login() {
             {/* Main Content Area */}
             <div className="login-container">
                 <div className="login-card">
-                    <h1 className="login-title">Welcome to Listsite</h1>
-                    <p className="login-subtitle">
-                        Listsite helps you to buy and sell your <br /> domain effortlessly
-                    </p>
+                    <div className="login-header-group">
+                        <h1 className="login-title">Welcome to Listsite</h1>
+                        <p className="login-subtitle">
+                            Listsite helps you to buy and sell your <br /> domain effortlessly
+                        </p>
+                    </div>
 
                     <form onSubmit={handleSubmit}>
                         <div className="form-group">
