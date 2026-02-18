@@ -79,21 +79,27 @@
     height: 100%;
 
     font-size: 14px;
-    color: #666;
-    font-weight: 400;
+    color: #003D35;
+    font-weight: 500;
 
     display: flex;
     align-items: center;
-    /* justify-content: center; REMOVED to align natural right */
+    gap: 8px;
+    /* Space between text and link */
+}
+
+.nav-auth-link span {
+    color: #666;
+    /* "Don't have an account?" text color */
 }
 
 .nav-auth-link a {
     color: #003D35;
     font-weight: 700;
     text-decoration: none;
-    margin-left: 5px;
     text-transform: uppercase;
     font-size: 13px;
+    letter-spacing: 0.5px;
 }
 
 .nav-auth-link a:hover {
@@ -325,4 +331,61 @@ form {
 .social-icon {
     width: 18px;
     height: 18px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .login-page {
+        border: none;
+    }
+
+    /* Hide vertical lines */
+    .login-page::before,
+    .login-page::after {
+        display: none;
+    }
+
+    /* Adjust navbar */
+    .login-navbar {
+        height: auto;
+        padding: 16px 20px;
+        flex-direction: row;
+        /* Keep row */
+        gap: 10px;
+    }
+
+    .nav-brand {
+        font-size: 22px;
+    }
+
+    .nav-auth-link span {
+        display: none;
+        /* Often cleaner to just show "REGISTER" on small screens, or stack them */
+    }
+
+    .nav-auth-link {
+        font-size: 13px;
+    }
+
+    /* Main Container */
+    .login-container {
+        padding: 40px 20px;
+        align-items: flex-start;
+        /* Or center? Reference image suggests clean look. */
+    }
+
+    /* Login Card */
+    .login-card {
+        width: 100%;
+        height: auto;
+        min-height: auto;
+        padding: 24px;
+        box-shadow: none;
+        /* Often cleaner on mobile to lose the box look or keep it subtle */
+        border: 1px solid #f1f1f1;
+    }
+
+    .social-buttons {
+        flex-direction: column;
+    }
 }
