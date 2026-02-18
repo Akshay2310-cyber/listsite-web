@@ -30,7 +30,7 @@ export default function Login() {
             <nav className="login-navbar">
                 <div className="nav-brand">LISTSITE</div>
                 <div className="nav-auth-link">
-                    Don't have an account? <a href="/register">REGISTER</a>
+                    <span>Don't have an account?</span> <a href="/register">REGISTER</a>
                 </div>
             </nav>
 
