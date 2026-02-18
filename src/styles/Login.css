@@ -1,11 +1,19 @@
-@import '../assets/fonts/general-sans/general-sans.css';
-
 .login-page {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     background-color: #ffffff;
     font-family: 'General Sans', 'Inter', system-ui, -apple-system, sans-serif;
+
+    /* Layout for centered bordered page */
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+
+    /* Borders */
+    border-left: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    box-sizing: border-box;
 }
 
 /* Navbar */
@@ -16,14 +24,27 @@
     padding: 20px 40px;
     background-color: #ffffff;
     border-bottom: 1px solid #f1f1f1;
+    /* Borders are handled by the parent page container to ensure continuity */
 }
 
 .nav-brand {
-    font-size: 24px;
-    font-weight: 700;
+    /* Precise dimensions requested */
+    width: 113px;
+    height: 36px;
+
+    font-family: 'General Sans', sans-serif;
+    font-size: 27px;
+    font-weight: 500;
+    font-style: normal;
+    /* "Medium" usually maps to 500 weight */
+    line-height: 100%;
+    letter-spacing: 0%;
     color: #003D35;
-    letter-spacing: 0.5px;
     text-transform: uppercase;
+
+    /* Flex alignment if needed, though block is fine */
+    display: flex;
+    align-items: center;
 }
 
 .nav-auth-link {
@@ -52,7 +73,8 @@
     justify-content: center;
     align-items: flex-start;
     /* Changed from center to allow custom top margin */
-    padding-top: 149px;
+    padding-top: 100px;
+    /* Reduced from 149px to move card "little up" */
     /* Matches top: 149px */
     background-color: #fcfcfc;
 }
@@ -73,7 +95,8 @@
     justify-content: flex-start;
     /* Or center internally? Usually forms top-align */
 
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    /* Updated shadow: "border should have shadow" - interpreting as a nice box shadow */
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.08);
     text-align: center;
     border: 1px solid #f0f0f0;
 
@@ -90,13 +113,26 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
+    align-items: center;
+    /* Ensure title/subtitle centered */
 }
 
 .login-title {
-    font-size: 26px;
-    font-weight: 700;
+    /* Precise typography requested */
+    font-family: 'General Sans', sans-serif;
+    font-weight: 500;
+    /* Medium */
+    font-size: 24px;
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    /* -3% */
+    text-align: center;
     color: #1a1a1a;
     margin: 0;
+
+    /* Width/Height from spec - using max-content or auto to avoid clipping */
+    width: auto;
+    /* width: 207px; Avoid hardcoding width that triggers wrapping unless visually required */
 }
 
 .login-subtitle {
