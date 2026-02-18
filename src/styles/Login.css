@@ -50,22 +50,38 @@
     flex: 1;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    /* Changed from center to allow custom top margin */
+    padding-top: 149px;
+    /* Matches top: 149px */
     background-color: #fcfcfc;
-    /* Very subtle grey for contrast, optional based on image */
-    padding: 40px;
 }
 
 .login-card {
     background: white;
-    width: 100%;
-    max-width: 450px;
-    padding: 40px 50px;
+    width: 447px;
+    height: 574px;
+    /* Fixed height as requested */
+    padding: 32px;
     border-radius: 12px;
+    gap: 32px;
+    /* Gap between flex items */
+
+    /* Layout properties */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* Or center internally? Usually forms top-align */
+
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-    /* Soft shadow */
     text-align: center;
     border: 1px solid #f0f0f0;
+
+    /* Ensure box-sizing handles padding correctly if global box-sizing isn't set (usually is) */
+    box-sizing: border-box;
+
+    /* visual properties requested */
+    opacity: 1;
 }
 
 /* Typography */
