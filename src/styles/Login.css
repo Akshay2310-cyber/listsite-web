@@ -46,8 +46,8 @@
     justify-content: space-between;
     align-items: center;
     height: 90px;
-    /* Padding = Line Position (60px) + Spacing (e.g., 30px) */
-    padding: 0 90px;
+    /* Padding = Line Position (60px) + Spacing (e.g., 20px) */
+    padding: 0 80px;
     background-color: #ffffff;
     border-bottom: 1px solid #e0e0e0;
     z-index: 5;
@@ -107,7 +107,7 @@
     justify-content: center;
     align-items: flex-start;
     /* Changed from center to allow custom top margin */
-    padding-top: 100px;
+    padding-top: 98px;
     /* Reduced from 149px to move card "little up" */
     /* Matches top: 149px */
     background-color: #fcfcfc;
